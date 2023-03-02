@@ -14,15 +14,7 @@ const picsMarkup = galleryItems
 
 gallery.insertAdjacentHTML("beforeend", `${picsMarkup}`);
 
-gallery.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  if (event.target.nodeName !== "IMG") {
-    return;
-  }
-
-  let galleryEL = new SimpleLightbox(".gallery a", {
-    captionsData: `alt`,
-    captionDelay: 250,
-  });
+let galleryEL = new SimpleLightbox(".gallery a", {
+  captionsData: `alt`,
+  captionDelay: 250,
 });
